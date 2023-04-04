@@ -2,7 +2,7 @@
 function get_data() {
    Promise.all([
       fetch("https://uselessfacts.jsph.pl/random.json?language=de").then(res => res.json()),
-      fetch("https://cataas.com/cat").then(res => res.json())
+      fetch("https://cataas.com/cat?json=true").then(res => res.json())
     ])
       .then(data => {
         document.querySelector("#text").innerHTML = data[0].text;
