@@ -7,8 +7,8 @@ function get_data() {
     ])
       .then(data => {
         document.querySelector("#text").innerHTML = data[0].text;
-        //document.querySelector("#cat-image").src = `https://cataas.com${data[1].url}`;
-        document.querySelector("#cat-image").src = data[1].url;
+        document.querySelector("#cat-image").src = `https://cataas.com${data[1].url}`;
+        //document.querySelector("#cat-image").src = data[1].url;
       })
       .catch(error => console.error(error));
   }
